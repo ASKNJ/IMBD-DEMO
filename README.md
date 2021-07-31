@@ -67,14 +67,14 @@ The usage for accessing information is simple. Follow the below steps:
 
 11. For Admin users:
   
-* ### ADD the data to resource
+* ### ADD data to resource
   1. We can ingest data in the form of JSON for single or array of JSONs for multiple rows.
   URL: https://imoxie.herokuapp.com/addData/.
   Auth token is reuired and request would be POST.
   **Expected is ** - You will get a response with status 200. And a message that Data is loaded successfully.
   >>  Without token: you don't have admin rights!
   
-* ### UPDATE the data to resource
+* ### UPDATE data to resource
   1. We can update data with passing body as JSON. With key value pair. Key--> Column and Value -->updated value that you want to update with.
   movie_id > you can get from response of get that you would want to update.
   URL: https://imoxie.herokuapp.com/updateData/<movie_id>/.
@@ -82,7 +82,7 @@ The usage for accessing information is simple. Follow the below steps:
   **Expected is ** - You will get a response with status 200. And a message that <yourkeycolumn(s)> updated for id:yourid.
   >>  Without token: you don't have admin rights!
   
-  * ### DELETE the data to resource
+  * ### DELETE data to resource
   1. We can delete the data with:
   URL: https://imoxie.herokuapp.com/deleteData/<movie_id>/.
   Auth token is reuired and request would be DELETE.
