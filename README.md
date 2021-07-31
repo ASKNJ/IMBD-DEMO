@@ -8,9 +8,9 @@
 * [Tech Power](#tech-power)
 * [Prerequisites](#prerequisites)
 * [Usage Steps](#usage-steps)
-* >> [Get data from resource](get-data-from-resource)
-* >> [ADD the data to resource](add-data-to-resource)
-* >> [DELETE the data to resource](delete-data-to-resource)
+* >> [Get data from resource](#get-data-from-resource)
+* >> [ADD the data to resource](#add-data-to-resource)
+* >> [DELETE the data to resource](#delete-data-to-resource)
 
 ### About Api
 This Api is designed for the demonstration of Fynd IMDB-Task. It includes all features given which are accesible from UI of Website.
@@ -55,7 +55,7 @@ The usage for accessing information is simple. Follow the below steps:
 10. While testing as a authenticated user:
 
 
-* ### GET the data from resource
+* ### GET data from resource
 1. Provide API token to validate in headers. URL: https://imoxie.herokuapp.com/getMovies/.
 **Expected is ** - You will get a response with status 200.
 >>  Without token: you will only get top 10 rated movies. Remember!
