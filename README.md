@@ -9,8 +9,8 @@
 * [Prerequisites](#prerequisites)
 * [Usage Steps](#usage-steps)
 * >> [Get data from resource](#get-data-from-resource)
-* >> [ADD the data to resource](#add-data-to-resource)
-* >> [DELETE the data to resource](#delete-data-to-resource)
+* >> [ADD data to resource](#add-data-to-resource)
+* >> [DELETE data to resource](#delete-data-to-resource)
 
 ### About Api
 This Api is designed for the demonstration of Fynd IMDB-Task. It includes all features given which are accesible from UI of Website.
