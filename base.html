@@ -38,7 +38,9 @@
         <div class="top">
         {% endif %}
             <div id="top-inner">
+                  {% if not user.is_authenticated %}
             <div class="datafree"></div>
+                {% endif %}
                 {# BETWEEN HEADER AND FOOTER #}
                 {% block Admin %}
                 {% endblock %}
