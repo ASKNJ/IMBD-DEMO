@@ -111,5 +111,9 @@ The usage for accessing information is simple. Follow the below steps:
 
  * ### Searching Data:
  ![searchMovie](https://user-images.githubusercontent.com/59699933/127779857-77b90fb9-b9a5-4201-9e46-500936efdedf.png)
+ 
+ * ### Unit testing:
+ ![UnitTest](https://user-images.githubusercontent.com/59699933/127779956-ff5b6b99-b904-49ac-b741-796b310013f8.png)
+
 
  ### Enjoy the Api!!!
