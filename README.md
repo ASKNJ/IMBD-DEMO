@@ -127,4 +127,6 @@ The usage for accessing information is simple. Follow the below steps:
  
  3. We can also use a CDN for our UI static files. "Fastly" is a really known CDN to have content delivered in different locations and have a distributed caching.
  
+ 4. We can take a hogh version of standard tier for our postgresql database on heroku so that our connection limit can also not cause any issue.
+ 
  ### Enjoy the Api!!!
