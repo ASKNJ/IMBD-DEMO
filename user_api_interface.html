@@ -1,0 +1,35 @@
+{% extends get_started %}
+{% load static %}
+{% load i18n %}
+
+
+{% block user_api %}
+    <div class="frame">
+        <div class="pXRme">
+            <div class="CXRme">
+                <input type="button" value="GetAllMovies" class="btnBig" id="get" datasrc="{{ key }}">
+            </div>
+            <div class="CXRme">
+                <input type="text" value="" placeholder="Search movie" class="movie_search" datasrc="{{ key }}"/>
+                <input type="button" value="SearchForMovie" class="btnBig" id="search">
+            </div>
+        </div>
+    <div class="data"></div>
+    <div class="_mar">
+        {% if not key %}
+            <h2>{% trans 'Click to create API token' %}</h2>
+            <form method="POST" enctype="multipart/form-data" action="{% url 'myapp:get_credentials' %}">
+                {% csrf_token %}
+                <input type="submit" class="btnBig" style="background-color: orangered" value="Generate"/>
+            </form>
+        {% else %}
+            <h4>{% trans 'Use the generated API key in your app to make requests and enjoy!' %}</h4>
+        {% endif %}
+        <p style="margin: 10px;">
+    <span>
+        {% trans 'Generated API key: ' %}{{ key }}
+    </span>
+        </p>
+    </div>
+    </div>
+{% endblock %}

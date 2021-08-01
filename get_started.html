@@ -1,0 +1,44 @@
+{% extends base_template %}
+{% load static %}
+{% load i18n %}
+
+{% block navbar %}
+    <nav>
+        <div class="_uig2">
+            <a href="{% url 'myapp:user_api' %}">
+                {% if main == "Y" or main == "N" %}
+                    <div id='_api' class="opt active">{% trans 'Use Api' %}</div>
+                {% else %}
+                    <div id='_api' class="opt">{% trans 'Use Api' %}</div>
+                {% endif %}
+            </a>
+        {% if on_admin == "Y" %}
+            <a href="{% url 'myapp:set_Admin' %}">
+                <div id='_any' class="opt active">{% trans 'Set Admin rights' %}</div>
+            </a>
+        {% else %}
+            <a href="{% url 'myapp:set_Admin' %}">
+                <div id='_any' class="opt">{% trans 'Set Admin rights' %}</div>
+            </a>
+        {% endif %}
+            <a href="{% url 'myapp:user_logout' %}">
+                <div class="opt">{% trans 'Logout' %}</div>
+            </a>
+        </div>
+    </nav>
+        {% if main == "Y" %}
+        <div class="msg">
+            <h2>
+                <p>
+                    {% trans 'Hello ' %}{{ request.user }}
+                </p>
+            </h2>
+            <p>
+                {% trans 'Welcome to IMDB movies API' %}
+            </p>
+        </div>
+    {% else %}
+        {% block user_api %}
+        {% endblock %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.big_box {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.lcard {
+flex: 0 1 50%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+padding: 40px;
+text-align: center;
+background-color: #f1f1f1;
+display: flex;
+flex-direction: column;
+}
+.social-btns{
+display: flex;
+flex-direction: row;
+padding: 20px;
+max-width: 100%;
+}
+
+#customBtn:hover{
+-webkit-filter: opacity(.5);
+cursor: pointer;
+}
+span.buttonText {
+display: flex;
+flex: 1;
+margin-right: 95px;
+font-size: 13px;
+font-weight: bold;
+line-height: 1.2;
+font-family: elvetica, Arial, sans-serif;
+margin-left: 10px;
+}
+#customBtn {
+display: flex;
+flex: 0 1;
+flex-direction: row;
+justify-content: flex-start;
+align-items: center;
+padding: 5px 0 5px 0;
+background: #a41515;
+color: white;
+border-radius: 5px;
+white-space: nowrap;
+max-width: 200px;
+max-height: 30px;
+}
+.btnBig{
+    padding: 10px 80px;
+    text-align: center;
+    margin: 10px;
+    background-color: blue;
+    color: #f1f1f1;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+}
+.btnBig:hover{
+    cursor: pointer;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .big_box {
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+  }
+}

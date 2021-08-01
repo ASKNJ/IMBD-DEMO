@@ -1,0 +1,28 @@
+{% extends base_template %}
+{% load static %}
+{% load i18n %}
+
+{% block Logincard %}
+    <script>startApp();</script>
+    <div class="big_box">
+        <div class="lcard">
+            <div class="_hdr">
+                <p>{% trans 'Welcome to IMBD Api' %}</p>
+            </div>
+            <div class="_hdr">
+                <p style="color: darkblue;">{% trans 'Login' %}</p>
+            </div>
+            <div class="_m1"><p></p></div>
+            <div class="social-btns">
+                {% csrf_token %}
+                <div id="gSignInWrapper">
+                    <div id="customBtn"><span id="google-icon" style="padding: 5px;"><img
+                            src="{% static 'icons/google-icon.png' %}"/></span>
+                        &nbsp;
+                        <span class="buttonText">{% trans 'Continue with Google' %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

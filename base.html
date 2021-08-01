@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load i18n %}
+
+<head>
+    <title>{% block head_title %}{% trans "IMBD" %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/base_design.css' %}">
+    <link rel="stylesheet" href="{% static 'css/LogincardDesign.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/login_func.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/navigations_func.js' %}"></script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="https://apis.google.com/js/api:client.js"></script>
+</head>
+<body>
+<section>
+    <div class="container">
+        {# page header #}
+        <div id="base-header-wrap">
+            <div id="base-header">
+                <div class="base-header-content-left">{% trans 'IMBD' %}</div>
+            </div>
+            {% if not user.is_authenticated%}
+            <div class="CXRme">
+                <input type="button" value="Get Top 10 Movies for free" class="btnBig" id="getfree">
+            </div>
+            {% endif %}
+        </div>
+        {# page header end#}
+        {% block navbar %}
+        {% endblock %}
+        {% if not user.is_authenticated %}
+        <div class="top" style="background-image: url({% static 'icons/posters.jpg' %})">
+            {% else %}
+        <div class="top">
+        {% endif %}
+            <div id="top-inner">
+            <div class="datafree"></div>
+                {# BETWEEN HEADER AND FOOTER #}
+                {% block Admin %}
+                {% endblock %}
+                <div id="top-inner-centre">
+                    {% block Logincard %}
+                    {% endblock %}
+                    {% block 404_temp %}
+                    {% endblock %}
+                </div>
+
+                {# BETWEEN HEADER AND FOOTER #}
+            </div>
+
+        </div>
+
+        <div class="bottom">
+
+        </div>
+
+    </div>
+</section>
+
+
+</body>
+</html>

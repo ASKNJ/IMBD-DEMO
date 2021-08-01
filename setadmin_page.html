@@ -1,0 +1,31 @@
+{% extends get_started %}
+{% load static %}
+{% load i18n %}
+
+{% block Admin %}
+    <div class="_mar">
+        <div class="msg" style="text-align: center;">
+            <h2>
+                <p>
+                    {% trans 'Hello ' %}{{ request.user }}
+                </p>
+            </h2>
+            <p>
+                {% trans 'Welcome to IMDB movies API. Set admin rights here.' %}
+            </p>
+        </div>
+    </div>
+    <article style="position: absolute;right: 0;">
+        {% if not admin %}
+            <h2>{% trans 'Click to get Admin access.' %}</h2>
+            <div class="CXRme">
+                <form method="POST" enctype="multipart/form-data" action="{% url 'myapp:set_Admin' %}">
+                    {% csrf_token %}
+                    <input type="submit" value="Set me Admin" class="btnBig" style="background-color: orangered;">
+                </form>
+            </div>
+        {% else %}
+            <h4>{% trans 'You are admin user. you have the power of remove/ update and add to resource.' %}</h4>
+        {% endif %}
+    </article>
+{% endblock %}
