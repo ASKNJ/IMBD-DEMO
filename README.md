@@ -27,6 +27,7 @@ Whilst designing the model. There are level of access rights are kept in mind.
 
 ### Tech Power
 I have made this basic version which can be wasily commercialised with a lot of effort, tea and have used:
+* Python
 * Django Framework
 * Postgresql
 * Heroku
