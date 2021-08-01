@@ -88,3 +88,6 @@ The usage for accessing information is simple. Follow the below steps:
   Auth token is reuired and request would be DELETE.
   **Expected is ** - You will get a response with status 200. And a message that row with id :yourid is deleted.
   >>  Without token: you don't have admin rights!
+ 
+ 
+ ### Enjoy the Api!!!
