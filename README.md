@@ -11,6 +11,7 @@
 * >> [Get data from resource](#get-data-from-resource)
 * >> [ADD data to resource](#add-data-to-resource)
 * >> [DELETE data to resource](#delete-data-to-resource)
+* [Writeup to Scaling](#writeup-to-scaling)
 
 ### About Api
 This Api is designed for the demonstration of Fynd IMDB-Task. It includes all features given which are accesible from UI of Website.
@@ -116,4 +117,14 @@ The usage for accessing information is simple. Follow the below steps:
  ![UnitTest](https://user-images.githubusercontent.com/59699933/127779956-ff5b6b99-b904-49ac-b741-796b310013f8.png)
 
 
+ * ### Writeup to Scaling:
+ 1. Auto Scaling feature of Heroku - Horizontally with requests.
+  For scaling we first use heroku performace tier where we can scalup the dynos(like servers in cloud) horizontally. A response time as per the response in the request in noted down in the metrics and we can also set/ change the Auto scaling wih the help of a slider. Everytime the scaling event occurs it will add or remove dyno subsequently.
+ We can set the threshold with timimg and fail of requests and triiger an Auto scaling event to scale up and when the requests goes own, we can also automatically scale in that removes dynos.
+ 
+ 2. Auto scaling - Vertically (Not going there really)
+ We can use good throughput and low latency with high storage machine on cloud that includes a dedicated feature for your app. This is also an option when money is not a concern. Because it is expensive. However here we only have web Http requests for which we need scaling so, there will be no need for worker dynos.
+ 
+ 3. We can also use a CDN for our UI static files. "Fastly" is a really known CDN to have content delivered in different locations and have a distributed caching.
+ 
  ### Enjoy the Api!!!
