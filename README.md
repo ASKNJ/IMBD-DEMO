@@ -89,6 +89,27 @@ The usage for accessing information is simple. Follow the below steps:
   Auth token is reuired and request would be DELETE.
   **Expected is ** - You will get a response with status 200. And a message that row with id :yourid is deleted.
   >>  Without token: you don't have admin rights!
+
  
+ ### Tests with Postman:
  
+ * #### Adding Data:
+ ![addData](https://user-images.githubusercontent.com/59699933/127779785-34e47850-4eff-445f-b95b-2df9c9380bdd.png)
+
+ 
+ * ### Updating Data:
+ ![updateData](https://user-images.githubusercontent.com/59699933/127779794-35748e8a-b5ba-45d8-92b5-241df4afa18d.png)
+
+ 
+* ### Deleting Data:
+ ![delateData](https://user-images.githubusercontent.com/59699933/127779846-eb398ffb-02f7-4cf3-bbda-09fd4ca89475.png)
+
+ 
+ * ### Getting/ Fteching data:
+ ![getMovies](https://user-images.githubusercontent.com/59699933/127779825-6bbb9ab8-2fc6-46f0-8d76-d34d131d0eee.png)
+
+
+ * ### Searching Data:
+ ![searchMovie](https://user-images.githubusercontent.com/59699933/127779857-77b90fb9-b9a5-4201-9e46-500936efdedf.png)
+
  ### Enjoy the Api!!!
