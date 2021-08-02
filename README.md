@@ -119,14 +119,17 @@ The usage for accessing information is simple. Follow the below steps:
 
  * ### Writeup to Scaling:
  1. Auto Scaling feature of Heroku - Horizontally with requests.
-  For scaling we first use heroku performace tier where we can scalup the dynos(like servers in cloud) horizontally. A response time as per the response in the request in noted down in the metrics and we can also set/ change the Auto scaling wih the help of a slider. Everytime the scaling event occurs it will add or remove dyno subsequently.
- We can set the threshold with timimg and fail of requests and triiger an Auto scaling event to scale up and when the requests goes own, we can also automatically scale in that removes dynos.
+  For scaling we first use heroku performace tier where we can scalup the dynos(like servers in cloud) horizontally. A response time as per the response in the request in noted   down in the metrics and we can also set/ change the Auto scaling wih the help of a slider. Everytime the scaling event occurs it will add or remove dyno subsequently.
+  We can set the threshold with timimg and fail of requests and triiger an Auto scaling event to scale up and when the requests goes own, we can also automatically scale in       that removes dynos.
  
  2. Auto scaling - Vertically (Not going there really)
- We can use good throughput and low latency with high storage machine on cloud that includes a dedicated feature for your app. This is also an option when money is not a concern. Because it is expensive. However here we only have web Http requests for which we need scaling so, there will be no need for worker dynos.
+ We can use good throughput and low latency with high storage machine on cloud that includes a dedicated feature for your app. This is also an option when money is not a         concern. Because it is expensive. However here we only have web Http requests for which we need scaling so, there will be no need for worker dynos.
  
  3. We can also use a CDN for our UI static files. "Fastly" is a really known CDN to have content delivered in different locations and have a distributed caching.
  
- 4. We can take a hogh version of standard tier for our postgresql database on heroku so that our connection limit can also not cause any issue.
+ 4. We can take a higher version of standard tier for our postgresql database on heroku so that our connection limit can also not cause any issue.
  
- ### Enjoy the Api!!!
+ 5. We can also use internal database cache to get optimised for our read operations. Postgres recommends to do 25% of memory to configure as cache. We can analyse this using      pg_statio_user_tables table and column heap_blks_hit for cache hit to configure. That helps a lot.
+ 
+
+ ### Thanks in advance !!! Enjoy the Api!!!
